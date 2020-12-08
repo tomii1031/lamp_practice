@@ -17,6 +17,8 @@ if(is_valid_csrf_token($token) === false){
   redirect_to(LOGIN_URL);
 }
 
+unset($_SESSION['csrf_token']);
+
 $db = get_db_connect();
 
 $user = get_login_user($db);

@@ -16,6 +16,8 @@ if(is_valid_csrf_token($token) === false){
   redirect_to(LOGIN_URL);
 }
 
+unset($_SESSION['csrf_token']);
+
 
 $name = get_post('name');
 $password = get_post('password');
