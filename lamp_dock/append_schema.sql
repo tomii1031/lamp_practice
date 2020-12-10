@@ -5,7 +5,7 @@
 CREATE TABLE purchase_history (
   `order_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   --
-  `item_id` int NOT NULL,
+  `user_id` int NOT NULL,
   `total_price` int NOT NULL,
   `create_datetime` datetime  DEFAULT CURRENT_TIMESTAMP NOT NULL,
   PRIMARY KEY (`order_id`)
