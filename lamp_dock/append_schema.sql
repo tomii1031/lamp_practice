@@ -3,7 +3,7 @@
 -- 明細id (A.I,主キー) item_id, 注文番号,個数,購入した時の価格
 
 CREATE TABLE purchase_history (
-  `order_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `order_id` int NOT NULL AUTO_INCREMENT,
   --
   `user_id` int NOT NULL,
   `total_price` int NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE purchase_history (
 
 
 CREATE TABLE purchase_details (
-  `detail_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `detail_id`  int NOT NULL AUTO_INCREMENT,
   --
   `item_id` int NOT NULL,
   `order_id` int NOT NULL,
