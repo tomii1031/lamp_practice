@@ -20,8 +20,11 @@ $db = get_db_connect();
 $user = get_login_user($db);
 
 
-
-$histories = get_history($db, $user['user_id']);
+if(is_admin($user) === false){
+  $histories = get_history($db, $user['user_id']);
+}else{
+  $histories = get_admin_history($db);
+}
 
 
 

@@ -27,4 +27,4 @@ $details = get_detail($db, $order_id);
 
 
 
-include_once '../view/detail_data.php';
+include_once '../view/detail_view.php';

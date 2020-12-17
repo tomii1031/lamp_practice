@@ -83,6 +83,7 @@ function get_history($db, $user_id){
               purchase_history
             WHERE
               user_id = :user_id
+            ORDER BY create_datetime DESC
            ";
 
            $params = array(':user_id' => $user_id);
@@ -120,6 +121,24 @@ function get_detail($db, $order_id){
   $params = array(':order_id' => $order_id);
 
   return fetch_all_query($db, $sql, $params);
+}
+
+function get_admin_history($db){
+
+  $sql = "
+            SELECT
+              order_id,
+              total_price,
+              create_datetime
+            FROM
+              purchase_history
+            ORDER BY create_datetime DESC
+           ";
+
+
+       return fetch_all_query($db, $sql);
+
+
 }
           
         

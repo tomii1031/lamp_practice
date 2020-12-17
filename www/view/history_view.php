@@ -10,9 +10,14 @@
         <?php include VIEW_PATH . 'templates/head.php'; ?>
         <link rel="stylesheet" href="<?php print(h(STYLESHEET_PATH . 'index.css')); ?>">
         <title>購入履歴画面</title>
+    
     </head>
 
 <body>
+  <?php 
+    include VIEW_PATH . 'templates/header_logined.php'; 
+  ?>
+
 
 
 <div class="container">
