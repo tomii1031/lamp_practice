@@ -58,16 +58,9 @@ if(history_detail($db, $carts, $order_id) === false){
 
 $db->commit();
 
+$histories = get_history($db, $user['user_id']);
 
 
- 
-
-
-
-// if(history_detail($db,$carts) === false){
-//   set_error('購入履歴の登録に失敗しました');
-//   redirect_to(CART_URL);
-// }
 
 
 
