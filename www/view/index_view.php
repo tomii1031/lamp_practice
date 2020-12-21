@@ -18,7 +18,7 @@
     <h1>商品一覧</h1>
     <?php include VIEW_PATH . 'templates/messages.php'; ?>
 
-    <?php print $item_num['id']. "件中". ($start+1). "-". $item_fin. "件目の商品" ;?>
+    <?php print h($item_num['id']. "件中".($start+1). "-". $item_fin. "件目の商品"); ?>
 
     <div class="card-deck">
       <div class="row">
@@ -54,9 +54,9 @@
         <ul class="pagination">
           <?php for($i; $i <= $max_page; $i++): ?>
             <?php if($i === $page_num): ?>
-              <li class="page-item active"><a class="page-link" href="#"><?php echo $i; ?></a></li>
+              <li class="page-item active"><a class="page-link" href="#"><?php echo h($i); ?></a></li>
             <?php else: ?>
-              <li class="page-item"><a  class="page-link" href="./index.php?page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+              <li class="page-item"><a  class="page-link" href="./index.php?page=<?php echo h($i); ?>"><?php echo h($i); ?></a></li>
             <?php endif; ?>
            <?php endfor; ?>
         </ul>
