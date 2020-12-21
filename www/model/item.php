@@ -41,7 +41,7 @@ function get_items($db, $is_open = false){
       WHERE status = 1
     ';
   }
-
+  
   return fetch_all_query($db, $sql);
 }
 
